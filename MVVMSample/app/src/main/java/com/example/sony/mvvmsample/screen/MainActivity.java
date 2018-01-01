@@ -1,7 +1,9 @@
-package com.example.sony.mvvmsample;
+package com.example.sony.mvvmsample.screen;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.sony.mvvmsample.R;
 
 public class MainActivity extends AppCompatActivity {
 
