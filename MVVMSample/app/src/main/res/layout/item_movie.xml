@@ -33,7 +33,6 @@
                         android:layout_height="match_parent">
                         <ImageView
 
-                            android:id="@+id/imv_posterMovie"
                             android:layout_width="100dp"
                             android:layout_height="150dp"
                             android:layout_marginLeft="12.5dp"
@@ -42,8 +41,8 @@
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true" />
                         <TextView
+                            android:text="@{movie.title}"
                             android:textColor="#FFF"
-                            android:id="@+id/tv_nameMovie"
                             android:layout_margin="1dp"
                             android:gravity="center"
                             android:layout_width="match_parent"

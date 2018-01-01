@@ -1,9 +1,9 @@
 package com.example.sony.mvvmsample.data.source.remote;
 
-import com.example.sony.mvpsample.data.model.Movie;
-import com.example.sony.mvpsample.data.model.ResponeModel;
-import com.example.sony.mvpsample.data.source.DataSource;
-import com.example.sony.mvpsample.util.Constant;
+import com.example.sony.mvvmsample.data.model.Movie;
+import com.example.sony.mvvmsample.data.model.ResponeModel;
+import com.example.sony.mvvmsample.data.source.DataSource;
+import com.example.sony.mvvmsample.util.Constant;
 
 import java.util.List;
 
