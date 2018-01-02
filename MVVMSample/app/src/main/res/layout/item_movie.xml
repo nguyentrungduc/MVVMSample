@@ -2,11 +2,18 @@
 <layout  xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <data>
+
+        <import type="com.example.sony.mvvmsample.util.Constant"/>
         <variable
             name="movie"
             type="com.example.sony.mvvmsample.data.model.Movie"/>
+
+        <variable
+            name="listener"
+            type="com.example.sony.mvvmsample.screen.MovieClickListenner"/>
     </data>
     <RelativeLayout
+        android:onClick="@{()-> listener.onClick(movie)}"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:background="#123456"
@@ -17,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                imageUrl="@{Constant.IMG_URL + movie.backdropPath}"
                 android:scaleType="centerCrop"
                 android:id="@+id/imv_background"
                 android:layout_width="match_parent"
@@ -32,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <ImageView
-
+                            imageUrl="@{Constant.IMG_URL + movie.posterPath}"
                             android:layout_width="100dp"
                             android:layout_height="150dp"
                             android:layout_marginLeft="12.5dp"

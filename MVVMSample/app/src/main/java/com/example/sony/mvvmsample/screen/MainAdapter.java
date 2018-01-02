@@ -24,12 +24,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
     private static final String TAG = MainAdapter.class.toString();
     private List<Movie> mMovie;
-    private Context context;
 
     public MainAdapter(List<Movie> mMovie) {
         this.mMovie = mMovie;
+
         Log.d(TAG,"contrustor adapter");
         Log.d(TAG, "list movie" +mMovie.toString());
+    }
+
+    private MovieClickListenner mMovieClickListener;
+
+
+
+    public void setItemClickListener(MovieClickListenner movieClickListener) {
+        mMovieClickListener = movieClickListener;
     }
 
     @Override
@@ -43,7 +51,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
     @Override
     public void onBindViewHolder(MainViewHolder holder, int position) {
         holder.bindData(mMovie.get(position));
-
     }
 
     @Override
@@ -61,6 +68,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
         public void bindData(Movie movie){
             itemMovieBinding.setMovie(movie);
+            itemMovieBinding.setListener(mMovieClickListener);
+
         }
     }
 }
