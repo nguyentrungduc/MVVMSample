@@ -17,10 +17,12 @@ public class BindingUtil {
         recyclerView.setAdapter(adapter);
     }
 
-    @BindingAdapter({"bind:imageUrl"})
+    @BindingAdapter({"imageUrl"})
     public static void loadImage(ImageView view, String url) {
         Picasso.with(view.getContext())
                 .load(url)
                 .into(view);
     }
+
+
 }

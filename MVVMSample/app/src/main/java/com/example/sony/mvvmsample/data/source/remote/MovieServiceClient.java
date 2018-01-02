@@ -3,6 +3,8 @@ package com.example.sony.mvvmsample.data.source.remote;
 import android.app.Application;
 import android.support.annotation.NonNull;
 
+import com.example.sony.mvvmsample.util.Constant;
+
 /**
  * Created by Sony on 12/22/2017.
  */

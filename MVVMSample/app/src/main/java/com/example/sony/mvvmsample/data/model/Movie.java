@@ -59,6 +59,9 @@ public class Movie extends RealmObject {
     @Expose
     private String releaseDate;
 
+    public Movie() {
+    }
+
     public Integer getVoteCount() {
         return voteCount;
     }
@@ -89,6 +92,10 @@ public class Movie extends RealmObject {
 
     public void setVoteAverage(Double voteAverage) {
         this.voteAverage = voteAverage;
+    }
+
+    public Movie(String title) {
+        this.title = title;
     }
 
     public String getTitle() {
